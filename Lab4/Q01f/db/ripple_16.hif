@@ -1,0 +1,160 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+|users|ana|desktop|mc613|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ripple_16
+# storage
+db|ripple_16.(0).cnf
+db|ripple_16.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ripple_16.vhd
+edca7671b25cc0a24cb4cd3a227ca
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|users|ana|desktop|mc613|lib_mc613_grupo1.vhd
+7889eba9dc806fc9fe1cf72c8377f11
+}
+# hierarchies {
+|
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ripple_carry_4
+# storage
+db|ripple_16.(1).cnf
+db|ripple_16.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|ana|desktop|mc613|ripple_carry_4.vhd
+d1a7d257953af8cfbd171368949ad6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+16
+PARAMETER_SIGNED_DEC
+USR
+ constraint(x)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(y)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ripple_carry_4:ripple16
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+full_adder
+# storage
+db|ripple_16.(2).cnf
+db|ripple_16.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|ana|desktop|mc613|full_adder.vhd
+55f8349ad4a9acff56db4e5dc593ed
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+ripple_carry_4:ripple16|full_adder:\adders:0:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:1:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:2:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:3:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:4:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:5:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:6:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:7:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:8:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:9:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:10:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:11:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:12:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:13:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:14:fulladders
+ripple_carry_4:ripple16|full_adder:\adders:15:fulladders
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

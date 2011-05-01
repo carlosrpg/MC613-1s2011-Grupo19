@@ -1,0 +1,334 @@
+|ripple_16
+C_in => ripple_carry_4:ripple16.C_in
+x[0] => ripple_carry_4:ripple16.x[0]
+x[1] => ripple_carry_4:ripple16.x[1]
+x[2] => ripple_carry_4:ripple16.x[2]
+x[3] => ripple_carry_4:ripple16.x[3]
+x[4] => ripple_carry_4:ripple16.x[4]
+x[5] => ripple_carry_4:ripple16.x[5]
+x[6] => ripple_carry_4:ripple16.x[6]
+x[7] => ripple_carry_4:ripple16.x[7]
+x[8] => ripple_carry_4:ripple16.x[8]
+x[9] => ripple_carry_4:ripple16.x[9]
+x[10] => ripple_carry_4:ripple16.x[10]
+x[11] => ripple_carry_4:ripple16.x[11]
+x[12] => ripple_carry_4:ripple16.x[12]
+x[13] => ripple_carry_4:ripple16.x[13]
+x[14] => ripple_carry_4:ripple16.x[14]
+x[15] => ripple_carry_4:ripple16.x[15]
+y[0] => ripple_carry_4:ripple16.y[0]
+y[1] => ripple_carry_4:ripple16.y[1]
+y[2] => ripple_carry_4:ripple16.y[2]
+y[3] => ripple_carry_4:ripple16.y[3]
+y[4] => ripple_carry_4:ripple16.y[4]
+y[5] => ripple_carry_4:ripple16.y[5]
+y[6] => ripple_carry_4:ripple16.y[6]
+y[7] => ripple_carry_4:ripple16.y[7]
+y[8] => ripple_carry_4:ripple16.y[8]
+y[9] => ripple_carry_4:ripple16.y[9]
+y[10] => ripple_carry_4:ripple16.y[10]
+y[11] => ripple_carry_4:ripple16.y[11]
+y[12] => ripple_carry_4:ripple16.y[12]
+y[13] => ripple_carry_4:ripple16.y[13]
+y[14] => ripple_carry_4:ripple16.y[14]
+y[15] => ripple_carry_4:ripple16.y[15]
+s[0] <= ripple_carry_4:ripple16.s[0]
+s[1] <= ripple_carry_4:ripple16.s[1]
+s[2] <= ripple_carry_4:ripple16.s[2]
+s[3] <= ripple_carry_4:ripple16.s[3]
+s[4] <= ripple_carry_4:ripple16.s[4]
+s[5] <= ripple_carry_4:ripple16.s[5]
+s[6] <= ripple_carry_4:ripple16.s[6]
+s[7] <= ripple_carry_4:ripple16.s[7]
+s[8] <= ripple_carry_4:ripple16.s[8]
+s[9] <= ripple_carry_4:ripple16.s[9]
+s[10] <= ripple_carry_4:ripple16.s[10]
+s[11] <= ripple_carry_4:ripple16.s[11]
+s[12] <= ripple_carry_4:ripple16.s[12]
+s[13] <= ripple_carry_4:ripple16.s[13]
+s[14] <= ripple_carry_4:ripple16.s[14]
+s[15] <= ripple_carry_4:ripple16.s[15]
+C_out <= ripple_carry_4:ripple16.C_out
+OverFlow <= ripple_carry_4:ripple16.OverFlow
+
+
+|ripple_16|ripple_carry_4:ripple16
+C_in => full_adder:adders:0:fulladders.C_IN
+x[0] => full_adder:adders:0:fulladders.INPUT_1
+x[1] => full_adder:adders:1:fulladders.INPUT_1
+x[2] => full_adder:adders:2:fulladders.INPUT_1
+x[3] => full_adder:adders:3:fulladders.INPUT_1
+x[4] => full_adder:adders:4:fulladders.INPUT_1
+x[5] => full_adder:adders:5:fulladders.INPUT_1
+x[6] => full_adder:adders:6:fulladders.INPUT_1
+x[7] => full_adder:adders:7:fulladders.INPUT_1
+x[8] => full_adder:adders:8:fulladders.INPUT_1
+x[9] => full_adder:adders:9:fulladders.INPUT_1
+x[10] => full_adder:adders:10:fulladders.INPUT_1
+x[11] => full_adder:adders:11:fulladders.INPUT_1
+x[12] => full_adder:adders:12:fulladders.INPUT_1
+x[13] => full_adder:adders:13:fulladders.INPUT_1
+x[14] => full_adder:adders:14:fulladders.INPUT_1
+x[15] => OverFlow.IN1
+x[15] => full_adder:adders:15:fulladders.INPUT_1
+y[0] => full_adder:adders:0:fulladders.INPUT_2
+y[1] => full_adder:adders:1:fulladders.INPUT_2
+y[2] => full_adder:adders:2:fulladders.INPUT_2
+y[3] => full_adder:adders:3:fulladders.INPUT_2
+y[4] => full_adder:adders:4:fulladders.INPUT_2
+y[5] => full_adder:adders:5:fulladders.INPUT_2
+y[6] => full_adder:adders:6:fulladders.INPUT_2
+y[7] => full_adder:adders:7:fulladders.INPUT_2
+y[8] => full_adder:adders:8:fulladders.INPUT_2
+y[9] => full_adder:adders:9:fulladders.INPUT_2
+y[10] => full_adder:adders:10:fulladders.INPUT_2
+y[11] => full_adder:adders:11:fulladders.INPUT_2
+y[12] => full_adder:adders:12:fulladders.INPUT_2
+y[13] => full_adder:adders:13:fulladders.INPUT_2
+y[14] => full_adder:adders:14:fulladders.INPUT_2
+y[15] => OverFlow.IN1
+y[15] => full_adder:adders:15:fulladders.INPUT_2
+s[0] <= full_adder:adders:0:fulladders.OUTPUT
+s[1] <= full_adder:adders:1:fulladders.OUTPUT
+s[2] <= full_adder:adders:2:fulladders.OUTPUT
+s[3] <= full_adder:adders:3:fulladders.OUTPUT
+s[4] <= full_adder:adders:4:fulladders.OUTPUT
+s[5] <= full_adder:adders:5:fulladders.OUTPUT
+s[6] <= full_adder:adders:6:fulladders.OUTPUT
+s[7] <= full_adder:adders:7:fulladders.OUTPUT
+s[8] <= full_adder:adders:8:fulladders.OUTPUT
+s[9] <= full_adder:adders:9:fulladders.OUTPUT
+s[10] <= full_adder:adders:10:fulladders.OUTPUT
+s[11] <= full_adder:adders:11:fulladders.OUTPUT
+s[12] <= full_adder:adders:12:fulladders.OUTPUT
+s[13] <= full_adder:adders:13:fulladders.OUTPUT
+s[14] <= full_adder:adders:14:fulladders.OUTPUT
+s[15] <= full_adder:adders:15:fulladders.OUTPUT
+C_out <= full_adder:adders:15:fulladders.C_OUT
+OverFlow <= OverFlow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:0:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:1:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:2:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:3:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:4:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:5:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:6:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:7:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:8:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:9:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:10:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:11:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:12:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:13:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:14:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_16|ripple_carry_4:ripple16|full_adder:\adders:15:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+

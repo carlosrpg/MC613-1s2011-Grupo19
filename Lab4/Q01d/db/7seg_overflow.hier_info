@@ -1,0 +1,135 @@
+|s_7seg_overflow
+in_1[0] => ripple_carry_4:ripple.x[0]
+in_1[1] => ripple_carry_4:ripple.x[1]
+in_1[2] => ripple_carry_4:ripple.x[2]
+in_1[3] => ripple_carry_4:ripple.x[3]
+in_2[0] => ripple_carry_4:ripple.y[0]
+in_2[1] => ripple_carry_4:ripple.y[1]
+in_2[2] => ripple_carry_4:ripple.y[2]
+in_2[3] => ripple_carry_4:ripple.y[3]
+c_in => ripple_carry_4:ripple.C_in
+disp[6] <= conv_7seg:conv7seg.f[0]
+disp[5] <= conv_7seg:conv7seg.f[1]
+disp[4] <= conv_7seg:conv7seg.f[2]
+disp[3] <= conv_7seg:conv7seg.f[3]
+disp[2] <= conv_7seg:conv7seg.f[4]
+disp[1] <= conv_7seg:conv7seg.f[5]
+disp[0] <= conv_7seg:conv7seg.f[6]
+c <= ripple_carry_4:ripple.C_out
+v <= ripple_carry_4:ripple.OverFlow
+
+
+|s_7seg_overflow|ripple_carry_4:ripple
+C_in => full_adder:adders:0:fulladders.C_IN
+x[0] => full_adder:adders:0:fulladders.INPUT_1
+x[1] => full_adder:adders:1:fulladders.INPUT_1
+x[2] => full_adder:adders:2:fulladders.INPUT_1
+x[3] => OverFlow.IN1
+x[3] => full_adder:adders:3:fulladders.INPUT_1
+y[0] => full_adder:adders:0:fulladders.INPUT_2
+y[1] => full_adder:adders:1:fulladders.INPUT_2
+y[2] => full_adder:adders:2:fulladders.INPUT_2
+y[3] => OverFlow.IN1
+y[3] => full_adder:adders:3:fulladders.INPUT_2
+s[0] <= full_adder:adders:0:fulladders.OUTPUT
+s[1] <= full_adder:adders:1:fulladders.OUTPUT
+s[2] <= full_adder:adders:2:fulladders.OUTPUT
+s[3] <= full_adder:adders:3:fulladders.OUTPUT
+C_out <= full_adder:adders:3:fulladders.C_OUT
+OverFlow <= OverFlow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|s_7seg_overflow|ripple_carry_4:ripple|full_adder:\adders:0:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|s_7seg_overflow|ripple_carry_4:ripple|full_adder:\adders:1:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|s_7seg_overflow|ripple_carry_4:ripple|full_adder:\adders:2:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|s_7seg_overflow|ripple_carry_4:ripple|full_adder:\adders:3:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|s_7seg_overflow|conv_7seg:conv7seg
+s[0] => Mux0.IN19
+s[0] => Mux1.IN19
+s[0] => Mux2.IN19
+s[0] => Mux3.IN19
+s[0] => Mux4.IN19
+s[0] => Mux5.IN19
+s[0] => Mux6.IN19
+s[1] => Mux0.IN18
+s[1] => Mux1.IN18
+s[1] => Mux2.IN18
+s[1] => Mux3.IN18
+s[1] => Mux4.IN18
+s[1] => Mux5.IN18
+s[1] => Mux6.IN18
+s[2] => Mux0.IN17
+s[2] => Mux1.IN17
+s[2] => Mux2.IN17
+s[2] => Mux3.IN17
+s[2] => Mux4.IN17
+s[2] => Mux5.IN17
+s[2] => Mux6.IN17
+s[3] => Mux0.IN16
+s[3] => Mux1.IN16
+s[3] => Mux2.IN16
+s[3] => Mux3.IN16
+s[3] => Mux4.IN16
+s[3] => Mux5.IN16
+s[3] => Mux6.IN16
+f[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+f[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+f[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+f[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+f[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+f[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+f[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

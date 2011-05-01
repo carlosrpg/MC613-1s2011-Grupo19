@@ -1,0 +1,103 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+conv_7seg
+# storage
+db|gray2bin.(1).cnf
+db|gray2bin.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|documents|unicamp|7 semestre|mc613|conv_7seg.vhd
+d1a6a6c82b6169f1e831d691f9b5486a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(s)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(f)
+0 to 6
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+conv_7seg:Conversor27Seg
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+gray2bin
+# storage
+db|gray2bin.(0).cnf
+db|gray2bin.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+gray2bin.vhd
+6024973aeb30236164ca656155c1a381
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|documents|unicamp|7 semestre|mc613|lib_mc613_grupo1.vhd
+d3515827b786939437977c7f623f9636
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

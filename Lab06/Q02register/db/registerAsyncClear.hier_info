@@ -1,0 +1,55 @@
+|registerAsyncClear
+input[0] => ffdLoad:registers:0:bitRegister.D
+input[1] => ffdLoad:registers:1:bitRegister.D
+input[2] => ffdLoad:registers:2:bitRegister.D
+input[3] => ffdLoad:registers:3:bitRegister.D
+Load => ffdLoad:registers:0:bitRegister.Load
+Load => ffdLoad:registers:1:bitRegister.Load
+Load => ffdLoad:registers:2:bitRegister.Load
+Load => ffdLoad:registers:3:bitRegister.Load
+Clear => ffdLoad:registers:0:bitRegister.Clear
+Clear => ffdLoad:registers:1:bitRegister.Clear
+Clear => ffdLoad:registers:2:bitRegister.Clear
+Clear => ffdLoad:registers:3:bitRegister.Clear
+clk => ffdLoad:registers:0:bitRegister.Clk
+clk => ffdLoad:registers:1:bitRegister.Clk
+clk => ffdLoad:registers:2:bitRegister.Clk
+clk => ffdLoad:registers:3:bitRegister.Clk
+output[0] <= ffdLoad:registers:0:bitRegister.Q
+output[1] <= ffdLoad:registers:1:bitRegister.Q
+output[2] <= ffdLoad:registers:2:bitRegister.Q
+output[3] <= ffdLoad:registers:3:bitRegister.Q
+
+
+|registerAsyncClear|ffdLoad:\registers:0:bitRegister
+D => Q~reg0.DATAIN
+Load => Q~reg0.ENA
+Clk => Q~reg0.CLK
+Clear => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|registerAsyncClear|ffdLoad:\registers:1:bitRegister
+D => Q~reg0.DATAIN
+Load => Q~reg0.ENA
+Clk => Q~reg0.CLK
+Clear => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|registerAsyncClear|ffdLoad:\registers:2:bitRegister
+D => Q~reg0.DATAIN
+Load => Q~reg0.ENA
+Clk => Q~reg0.CLK
+Clear => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|registerAsyncClear|ffdLoad:\registers:3:bitRegister
+D => Q~reg0.DATAIN
+Load => Q~reg0.ENA
+Clk => Q~reg0.CLK
+Clear => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,255 @@
+Simulator report for multiplier
+Fri Apr 15 11:00:31 2011
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.56 us      ;
+; Simulation Netlist Size     ; 96 nodes     ;
+; Simulation Coverage         ;      98.96 % ;
+; Total Number of Transitions ; 6516         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      98.96 % ;
+; Total nodes checked                                 ; 96           ;
+; Total output ports checked                          ; 96           ;
+; Total output ports with complete 1/0-value coverage ; 95           ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 1            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                        ;
++------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                      ; Output Port Name                                                                               ; Output Port Type ;
++------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+; |multiplier|vector[0][3]                                                                       ; |multiplier|vector[0][3]                                                                       ; out              ;
+; |multiplier|vector[0][2]                                                                       ; |multiplier|vector[0][2]                                                                       ; out              ;
+; |multiplier|vector[0][1]                                                                       ; |multiplier|vector[0][1]                                                                       ; out              ;
+; |multiplier|vector[0][0]                                                                       ; |multiplier|vector[0][0]                                                                       ; out              ;
+; |multiplier|vector[2][4]                                                                       ; |multiplier|vector[2][4]                                                                       ; out              ;
+; |multiplier|vector[2][3]                                                                       ; |multiplier|vector[2][3]                                                                       ; out              ;
+; |multiplier|vector[2][2]                                                                       ; |multiplier|vector[2][2]                                                                       ; out              ;
+; |multiplier|vector[2][1]                                                                       ; |multiplier|vector[2][1]                                                                       ; out              ;
+; |multiplier|vector[4][5]                                                                       ; |multiplier|vector[4][5]                                                                       ; out              ;
+; |multiplier|vector[4][4]                                                                       ; |multiplier|vector[4][4]                                                                       ; out              ;
+; |multiplier|vector[4][3]                                                                       ; |multiplier|vector[4][3]                                                                       ; out              ;
+; |multiplier|vector[4][2]                                                                       ; |multiplier|vector[4][2]                                                                       ; out              ;
+; |multiplier|vector[6][6]                                                                       ; |multiplier|vector[6][6]                                                                       ; out              ;
+; |multiplier|vector[6][5]                                                                       ; |multiplier|vector[6][5]                                                                       ; out              ;
+; |multiplier|vector[6][4]                                                                       ; |multiplier|vector[6][4]                                                                       ; out              ;
+; |multiplier|vector[6][3]                                                                       ; |multiplier|vector[6][3]                                                                       ; out              ;
+; |multiplier|x[0]                                                                               ; |multiplier|x[0]                                                                               ; out              ;
+; |multiplier|x[1]                                                                               ; |multiplier|x[1]                                                                               ; out              ;
+; |multiplier|x[2]                                                                               ; |multiplier|x[2]                                                                               ; out              ;
+; |multiplier|x[3]                                                                               ; |multiplier|x[3]                                                                               ; out              ;
+; |multiplier|y[0]                                                                               ; |multiplier|y[0]                                                                               ; out              ;
+; |multiplier|y[1]                                                                               ; |multiplier|y[1]                                                                               ; out              ;
+; |multiplier|y[2]                                                                               ; |multiplier|y[2]                                                                               ; out              ;
+; |multiplier|s[0]                                                                               ; |multiplier|s[0]                                                                               ; pin_out          ;
+; |multiplier|s[1]                                                                               ; |multiplier|s[1]                                                                               ; pin_out          ;
+; |multiplier|s[2]                                                                               ; |multiplier|s[2]                                                                               ; pin_out          ;
+; |multiplier|s[3]                                                                               ; |multiplier|s[3]                                                                               ; pin_out          ;
+; |multiplier|s[4]                                                                               ; |multiplier|s[4]                                                                               ; pin_out          ;
+; |multiplier|s[5]                                                                               ; |multiplier|s[5]                                                                               ; pin_out          ;
+; |multiplier|s[6]                                                                               ; |multiplier|s[6]                                                                               ; pin_out          ;
+; |multiplier|s[7]                                                                               ; |multiplier|s[7]                                                                               ; pin_out          ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|OUTPUT   ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|OUTPUT   ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT~1  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT~1  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT~2  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT~2  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT~3  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT~3  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT    ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders|C_OUT    ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|OUTPUT   ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|OUTPUT   ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~1  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~1  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~2  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~2  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~3  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~3  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT    ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT    ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT   ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT   ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~1  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~1  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~2  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~2  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~3  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~3  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT    ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT    ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|OUTPUT   ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|OUTPUT   ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~1  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~1  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~2  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~2  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~3  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT~3  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT    ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders|C_OUT    ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT   ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT   ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~1  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~1  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~2  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~2  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~3  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~3  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT    ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT    ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT   ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT   ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~1  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~1  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~2  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~2  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~3  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~3  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT    ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT    ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:2:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:2:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT   ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:4:fulladders|OUTPUT   ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~3  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:4:fulladders|C_OUT~3  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT   ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|OUTPUT   ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~1  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~1  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~2  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~2  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~3  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT~3  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT    ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders|C_OUT    ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|OUTPUT   ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|OUTPUT   ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~0  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~1  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~1  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~2  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~2  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~3  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT~3  ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT    ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders|C_OUT    ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:1:fulladders|OUTPUT~0 ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:1:fulladders|OUTPUT~0 ; out0             ;
+; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:1:fulladders|C_OUT~0  ; |multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:1:fulladders|C_OUT~0  ; out0             ;
++------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------+
+; Missing 0-Value Coverage                               ;
++------------------+------------------+------------------+
+; Node Name        ; Output Port Name ; Output Port Type ;
++------------------+------------------+------------------+
+; |multiplier|y[3] ; |multiplier|y[3] ; out              ;
++------------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Apr 15 11:00:31 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off multiplier -c multiplier
+Info: Using vector source file "H:/MC613/multiplicador/multiplier.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      98.96 %
+Info: Number of transitions in simulation is 6516
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 108 megabytes
+    Info: Processing ended: Fri Apr 15 11:00:32 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

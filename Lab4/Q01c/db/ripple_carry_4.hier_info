@@ -1,0 +1,76 @@
+|ripple_carry_4
+C_in => full_adder:adders:0:fulladders.C_IN
+x[0] => full_adder:adders:0:fulladders.INPUT_1
+x[1] => full_adder:adders:1:fulladders.INPUT_1
+x[2] => full_adder:adders:2:fulladders.INPUT_1
+x[3] => OverFlow.IN1
+x[3] => full_adder:adders:3:fulladders.INPUT_1
+y[0] => full_adder:adders:0:fulladders.INPUT_2
+y[1] => full_adder:adders:1:fulladders.INPUT_2
+y[2] => full_adder:adders:2:fulladders.INPUT_2
+y[3] => OverFlow.IN1
+y[3] => full_adder:adders:3:fulladders.INPUT_2
+s[0] <= full_adder:adders:0:fulladders.OUTPUT
+s[1] <= full_adder:adders:1:fulladders.OUTPUT
+s[2] <= full_adder:adders:2:fulladders.OUTPUT
+s[3] <= full_adder:adders:3:fulladders.OUTPUT
+C_out <= full_adder:adders:3:fulladders.C_OUT
+OverFlow <= OverFlow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_carry_4|full_adder:\adders:0:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_carry_4|full_adder:\adders:1:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_carry_4|full_adder:\adders:2:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_carry_4|full_adder:\adders:3:fulladders
+C_IN => OUTPUT.IN1
+C_IN => C_OUT.IN0
+C_IN => C_OUT.IN0
+INPUT_1 => OUTPUT.IN0
+INPUT_1 => C_OUT.IN0
+INPUT_1 => C_OUT.IN1
+INPUT_2 => OUTPUT.IN1
+INPUT_2 => C_OUT.IN1
+INPUT_2 => C_OUT.IN1
+C_OUT <= C_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+

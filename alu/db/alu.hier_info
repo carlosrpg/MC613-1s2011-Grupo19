@@ -1,0 +1,138 @@
+|alu
+A[0] => RESULT~9.IN0
+A[0] => RESULT~17.IN0
+A[0] => ripple_n:alu_adder.x[0]
+A[1] => RESULT~10.IN0
+A[1] => RESULT~18.IN0
+A[1] => ripple_n:alu_adder.x[1]
+A[2] => RESULT~11.IN0
+A[2] => RESULT~19.IN0
+A[2] => ripple_n:alu_adder.x[2]
+A[3] => RESULT~12.IN0
+A[3] => RESULT~20.IN0
+A[3] => ripple_n:alu_adder.x[3]
+B[0] => inputB[0].DATAA
+B[0] => RESULT~9.IN1
+B[0] => RESULT~17.IN1
+B[0] => inputB[0].DATAB
+B[1] => inputB[1].DATAA
+B[1] => RESULT~10.IN1
+B[1] => RESULT~18.IN1
+B[1] => inputB[1].DATAB
+B[2] => inputB[2].DATAA
+B[2] => RESULT~11.IN1
+B[2] => RESULT~19.IN1
+B[2] => inputB[2].DATAB
+B[3] => inputB[3].DATAA
+B[3] => RESULT~12.IN1
+B[3] => RESULT~20.IN1
+B[3] => inputB[3].DATAB
+ALUCONT[0] => Equal0.IN0
+ALUCONT[0] => Equal1.IN2
+ALUCONT[0] => Equal2.IN0
+ALUCONT[0] => Equal3.IN2
+ALUCONT[0] => Equal4.IN2
+ALUCONT[0] => Equal5.IN2
+ALUCONT[0] => Equal6.IN2
+ALUCONT[0] => Equal7.IN1
+ALUCONT[0] => Equal8.IN0
+ALUCONT[1] => Equal0.IN2
+ALUCONT[1] => Equal1.IN1
+ALUCONT[1] => Equal2.IN2
+ALUCONT[1] => Equal3.IN1
+ALUCONT[1] => Equal4.IN1
+ALUCONT[1] => Equal5.IN1
+ALUCONT[1] => Equal6.IN1
+ALUCONT[1] => Equal7.IN2
+ALUCONT[1] => Equal8.IN2
+ALUCONT[2] => Equal0.IN1
+ALUCONT[2] => Equal1.IN0
+ALUCONT[2] => Equal2.IN1
+ALUCONT[2] => Equal3.IN0
+ALUCONT[2] => Equal4.IN0
+ALUCONT[2] => Equal5.IN0
+ALUCONT[2] => Equal6.IN0
+ALUCONT[2] => Equal7.IN0
+ALUCONT[2] => Equal8.IN1
+RESULT[0] <= RESULT~32.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[1] <= RESULT~31.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[2] <= RESULT~30.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[3] <= RESULT~29.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_n:alu_adder
+C_in => full_adder:adders:0:fulladders.C_IN
+x[0] => full_adder:adders:0:fulladders.INPUT_1
+x[1] => full_adder:adders:1:fulladders.INPUT_1
+x[2] => full_adder:adders:2:fulladders.INPUT_1
+x[3] => OverFlow~0.IN1
+x[3] => full_adder:adders:3:fulladders.INPUT_1
+y[0] => full_adder:adders:0:fulladders.INPUT_2
+y[1] => full_adder:adders:1:fulladders.INPUT_2
+y[2] => full_adder:adders:2:fulladders.INPUT_2
+y[3] => OverFlow~1.IN1
+y[3] => full_adder:adders:3:fulladders.INPUT_2
+s[0] <= full_adder:adders:0:fulladders.OUTPUT
+s[1] <= full_adder:adders:1:fulladders.OUTPUT
+s[2] <= full_adder:adders:2:fulladders.OUTPUT
+s[3] <= full_adder:adders:3:fulladders.OUTPUT
+C_out <= full_adder:adders:3:fulladders.C_OUT
+OverFlow <= OverFlow~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_n:alu_adder|full_adder:\adders:0:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_n:alu_adder|full_adder:\adders:1:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_n:alu_adder|full_adder:\adders:2:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_n:alu_adder|full_adder:\adders:3:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+

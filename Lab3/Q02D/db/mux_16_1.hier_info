@@ -1,0 +1,235 @@
+|mux_16_1
+s[0] => mux_4_1:mux16to1:0:Muxes.s[0]
+s[0] => mux_4_1:mux16to1:1:Muxes.s[0]
+s[0] => mux_4_1:mux16to1:2:Muxes.s[0]
+s[0] => mux_4_1:mux16to1:3:Muxes.s[0]
+s[1] => mux_4_1:mux16to1:0:Muxes.s[1]
+s[1] => mux_4_1:mux16to1:1:Muxes.s[1]
+s[1] => mux_4_1:mux16to1:2:Muxes.s[1]
+s[1] => mux_4_1:mux16to1:3:Muxes.s[1]
+s[2] => mux_4_1:Mux5.s[0]
+s[3] => mux_4_1:Mux5.s[1]
+w[0] => ~NO_FANOUT~
+w[1] => ~NO_FANOUT~
+w[2] => ~NO_FANOUT~
+w[3] => ~NO_FANOUT~
+w[4] => ~NO_FANOUT~
+w[5] => ~NO_FANOUT~
+w[6] => ~NO_FANOUT~
+w[7] => ~NO_FANOUT~
+w[8] => ~NO_FANOUT~
+w[9] => ~NO_FANOUT~
+w[10] => ~NO_FANOUT~
+w[11] => ~NO_FANOUT~
+w[12] => ~NO_FANOUT~
+w[13] => ~NO_FANOUT~
+w[14] => ~NO_FANOUT~
+w[15] => ~NO_FANOUT~
+f <= mux_4_1:Mux5.f
+
+
+|mux_16_1|mux_4_1:\mux16to1:0:Muxes
+s[0] => decoder_2_4:Decoder.w[0]
+s[1] => decoder_2_4:Decoder.w[1]
+w[0] => componenteFig3:Componente.y[0]
+w[1] => componenteFig3:Componente.y[1]
+w[2] => componenteFig3:Componente.y[2]
+w[3] => componenteFig3:Componente.y[3]
+f <= componenteFig3:Componente.f
+
+
+|mux_16_1|mux_4_1:\mux16to1:0:Muxes|decoder_2_4:Decoder
+w[0] => Mux0.IN10
+w[0] => Mux1.IN10
+w[0] => Mux2.IN10
+w[0] => Mux3.IN10
+w[1] => Mux0.IN9
+w[1] => Mux1.IN9
+w[1] => Mux2.IN9
+w[1] => Mux3.IN9
+En => Mux0.IN8
+En => Mux1.IN8
+En => Mux2.IN8
+En => Mux3.IN8
+y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_16_1|mux_4_1:\mux16to1:0:Muxes|componenteFig3:Componente
+y[0] => Aux[0].IN0
+y[1] => Aux[1].IN0
+y[2] => Aux[2].IN0
+y[3] => Aux[3].IN0
+w[0] => Aux[0].IN1
+w[1] => Aux[1].IN1
+w[2] => Aux[2].IN1
+w[3] => Aux[3].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_16_1|mux_4_1:\mux16to1:1:Muxes
+s[0] => decoder_2_4:Decoder.w[0]
+s[1] => decoder_2_4:Decoder.w[1]
+w[0] => componenteFig3:Componente.y[0]
+w[1] => componenteFig3:Componente.y[1]
+w[2] => componenteFig3:Componente.y[2]
+w[3] => componenteFig3:Componente.y[3]
+f <= componenteFig3:Componente.f
+
+
+|mux_16_1|mux_4_1:\mux16to1:1:Muxes|decoder_2_4:Decoder
+w[0] => Mux0.IN10
+w[0] => Mux1.IN10
+w[0] => Mux2.IN10
+w[0] => Mux3.IN10
+w[1] => Mux0.IN9
+w[1] => Mux1.IN9
+w[1] => Mux2.IN9
+w[1] => Mux3.IN9
+En => Mux0.IN8
+En => Mux1.IN8
+En => Mux2.IN8
+En => Mux3.IN8
+y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_16_1|mux_4_1:\mux16to1:1:Muxes|componenteFig3:Componente
+y[0] => Aux[0].IN0
+y[1] => Aux[1].IN0
+y[2] => Aux[2].IN0
+y[3] => Aux[3].IN0
+w[0] => Aux[0].IN1
+w[1] => Aux[1].IN1
+w[2] => Aux[2].IN1
+w[3] => Aux[3].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_16_1|mux_4_1:\mux16to1:2:Muxes
+s[0] => decoder_2_4:Decoder.w[0]
+s[1] => decoder_2_4:Decoder.w[1]
+w[0] => componenteFig3:Componente.y[0]
+w[1] => componenteFig3:Componente.y[1]
+w[2] => componenteFig3:Componente.y[2]
+w[3] => componenteFig3:Componente.y[3]
+f <= componenteFig3:Componente.f
+
+
+|mux_16_1|mux_4_1:\mux16to1:2:Muxes|decoder_2_4:Decoder
+w[0] => Mux0.IN10
+w[0] => Mux1.IN10
+w[0] => Mux2.IN10
+w[0] => Mux3.IN10
+w[1] => Mux0.IN9
+w[1] => Mux1.IN9
+w[1] => Mux2.IN9
+w[1] => Mux3.IN9
+En => Mux0.IN8
+En => Mux1.IN8
+En => Mux2.IN8
+En => Mux3.IN8
+y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_16_1|mux_4_1:\mux16to1:2:Muxes|componenteFig3:Componente
+y[0] => Aux[0].IN0
+y[1] => Aux[1].IN0
+y[2] => Aux[2].IN0
+y[3] => Aux[3].IN0
+w[0] => Aux[0].IN1
+w[1] => Aux[1].IN1
+w[2] => Aux[2].IN1
+w[3] => Aux[3].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_16_1|mux_4_1:\mux16to1:3:Muxes
+s[0] => decoder_2_4:Decoder.w[0]
+s[1] => decoder_2_4:Decoder.w[1]
+w[0] => componenteFig3:Componente.y[0]
+w[1] => componenteFig3:Componente.y[1]
+w[2] => componenteFig3:Componente.y[2]
+w[3] => componenteFig3:Componente.y[3]
+f <= componenteFig3:Componente.f
+
+
+|mux_16_1|mux_4_1:\mux16to1:3:Muxes|decoder_2_4:Decoder
+w[0] => Mux0.IN10
+w[0] => Mux1.IN10
+w[0] => Mux2.IN10
+w[0] => Mux3.IN10
+w[1] => Mux0.IN9
+w[1] => Mux1.IN9
+w[1] => Mux2.IN9
+w[1] => Mux3.IN9
+En => Mux0.IN8
+En => Mux1.IN8
+En => Mux2.IN8
+En => Mux3.IN8
+y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_16_1|mux_4_1:\mux16to1:3:Muxes|componenteFig3:Componente
+y[0] => Aux[0].IN0
+y[1] => Aux[1].IN0
+y[2] => Aux[2].IN0
+y[3] => Aux[3].IN0
+w[0] => Aux[0].IN1
+w[1] => Aux[1].IN1
+w[2] => Aux[2].IN1
+w[3] => Aux[3].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_16_1|mux_4_1:Mux5
+s[0] => decoder_2_4:Decoder.w[0]
+s[1] => decoder_2_4:Decoder.w[1]
+w[0] => componenteFig3:Componente.y[0]
+w[1] => componenteFig3:Componente.y[1]
+w[2] => componenteFig3:Componente.y[2]
+w[3] => componenteFig3:Componente.y[3]
+f <= componenteFig3:Componente.f
+
+
+|mux_16_1|mux_4_1:Mux5|decoder_2_4:Decoder
+w[0] => Mux0.IN10
+w[0] => Mux1.IN10
+w[0] => Mux2.IN10
+w[0] => Mux3.IN10
+w[1] => Mux0.IN9
+w[1] => Mux1.IN9
+w[1] => Mux2.IN9
+w[1] => Mux3.IN9
+En => Mux0.IN8
+En => Mux1.IN8
+En => Mux2.IN8
+En => Mux3.IN8
+y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_16_1|mux_4_1:Mux5|componenteFig3:Componente
+y[0] => Aux[0].IN0
+y[1] => Aux[1].IN0
+y[2] => Aux[2].IN0
+y[3] => Aux[3].IN0
+w[0] => Aux[0].IN1
+w[1] => Aux[1].IN1
+w[2] => Aux[2].IN1
+w[3] => Aux[3].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,8 @@
+|latchSR
+S => process_0~0.IN0
+R => process_0~0.IN1
+EN => Q$latch.LATCH_ENABLE
+Clear => Q$latch.ACLR
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

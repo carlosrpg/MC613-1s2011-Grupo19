@@ -1,0 +1,102 @@
+Quartus II
+Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+full_adder
+# storage
+db|ripple_carry_4.(1).cnf
+db|ripple_carry_4.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|mc613|full_adder.vhd
+55f8349ad4a9acff56db4e5dc593ed
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+full_adder:\adders:0:fulladders
+full_adder:\adders:1:fulladders
+full_adder:\adders:2:fulladders
+full_adder:\adders:3:fulladders
+}
+# lmf
+c:|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ripple_carry_4
+# storage
+db|ripple_carry_4.(0).cnf
+db|ripple_carry_4.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|mc613|ripple_carry_4.vhd
+d1a7d257953af8cfbd171368949ad6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+4
+PARAMETER_SIGNED_DEC
+DEF
+}
+# include_file {
+|mc613|lib_mc613_grupo1.vhd
+793150723b95a3875ec22fdfff5e644
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

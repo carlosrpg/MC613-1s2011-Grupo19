@@ -1,0 +1,164 @@
+Classic Timing Analyzer report for ripple_carry_4
+Fri Apr 01 12:07:47 2011
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Parallel Compilation
+  5. tpd
+  6. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                 ;
++------------------------------+-------+---------------+-------------+------+------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From ; To   ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+------+------+------------+----------+--------------+
+; Worst-case tpd               ; N/A   ; None          ; 9.310 ns    ; C_in ; s[3] ; --         ; --       ; 0            ;
+; Total number of failed paths ;       ;               ;             ;      ;      ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+------+------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------+
+; tpd                                                           ;
++-------+-------------------+-----------------+------+----------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From ; To       ;
++-------+-------------------+-----------------+------+----------+
+; N/A   ; None              ; 9.310 ns        ; C_in ; s[3]     ;
+; N/A   ; None              ; 8.889 ns        ; C_in ; C_out    ;
+; N/A   ; None              ; 8.746 ns        ; y[0] ; s[3]     ;
+; N/A   ; None              ; 8.715 ns        ; y[2] ; s[3]     ;
+; N/A   ; None              ; 8.581 ns        ; C_in ; OverFlow ;
+; N/A   ; None              ; 8.430 ns        ; C_in ; s[2]     ;
+; N/A   ; None              ; 8.325 ns        ; y[0] ; C_out    ;
+; N/A   ; None              ; 8.294 ns        ; y[2] ; C_out    ;
+; N/A   ; None              ; 8.134 ns        ; y[3] ; s[3]     ;
+; N/A   ; None              ; 8.017 ns        ; y[0] ; OverFlow ;
+; N/A   ; None              ; 7.986 ns        ; y[2] ; OverFlow ;
+; N/A   ; None              ; 7.866 ns        ; y[0] ; s[2]     ;
+; N/A   ; None              ; 7.835 ns        ; y[2] ; s[2]     ;
+; N/A   ; None              ; 7.822 ns        ; x[2] ; s[3]     ;
+; N/A   ; None              ; 7.765 ns        ; x[0] ; s[3]     ;
+; N/A   ; None              ; 7.752 ns        ; C_in ; s[1]     ;
+; N/A   ; None              ; 7.727 ns        ; y[1] ; s[3]     ;
+; N/A   ; None              ; 7.711 ns        ; y[3] ; C_out    ;
+; N/A   ; None              ; 7.620 ns        ; C_in ; s[0]     ;
+; N/A   ; None              ; 7.442 ns        ; x[3] ; s[3]     ;
+; N/A   ; None              ; 7.406 ns        ; y[3] ; OverFlow ;
+; N/A   ; None              ; 7.401 ns        ; x[2] ; C_out    ;
+; N/A   ; None              ; 7.344 ns        ; x[0] ; C_out    ;
+; N/A   ; None              ; 7.306 ns        ; y[1] ; C_out    ;
+; N/A   ; None              ; 7.188 ns        ; y[0] ; s[1]     ;
+; N/A   ; None              ; 7.093 ns        ; x[2] ; OverFlow ;
+; N/A   ; None              ; 7.046 ns        ; y[0] ; s[0]     ;
+; N/A   ; None              ; 7.036 ns        ; x[0] ; OverFlow ;
+; N/A   ; None              ; 7.023 ns        ; x[3] ; C_out    ;
+; N/A   ; None              ; 6.998 ns        ; y[1] ; OverFlow ;
+; N/A   ; None              ; 6.968 ns        ; x[1] ; s[3]     ;
+; N/A   ; None              ; 6.939 ns        ; x[2] ; s[2]     ;
+; N/A   ; None              ; 6.885 ns        ; x[0] ; s[2]     ;
+; N/A   ; None              ; 6.846 ns        ; y[1] ; s[2]     ;
+; N/A   ; None              ; 6.714 ns        ; x[3] ; OverFlow ;
+; N/A   ; None              ; 6.703 ns        ; y[1] ; s[1]     ;
+; N/A   ; None              ; 6.547 ns        ; x[1] ; C_out    ;
+; N/A   ; None              ; 6.239 ns        ; x[1] ; OverFlow ;
+; N/A   ; None              ; 6.207 ns        ; x[0] ; s[1]     ;
+; N/A   ; None              ; 6.140 ns        ; x[1] ; s[1]     ;
+; N/A   ; None              ; 6.085 ns        ; x[1] ; s[2]     ;
+; N/A   ; None              ; 6.072 ns        ; x[0] ; s[0]     ;
++-------+-------------------+-----------------+------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Apr 01 12:07:47 2011
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ripple_carry_4 -c ripple_carry_4 --timing_analysis_only
+Info: Longest tpd from source pin "C_in" to destination pin "s[3]" is 9.310 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L2; Fanout = 2; PIN Node = 'C_in'
+    Info: 2: + IC(2.561 ns) + CELL(0.319 ns) = 3.906 ns; Loc. = LCCOMB_X49_Y8_N26; Fanout = 3; COMB Node = 'full_adder:\adders:0:fulladders|C_OUT~0'
+    Info: 3: + IC(0.318 ns) + CELL(0.521 ns) = 4.745 ns; Loc. = LCCOMB_X49_Y8_N30; Fanout = 3; COMB Node = 'full_adder:\adders:2:fulladders|C_OUT~2'
+    Info: 4: + IC(0.316 ns) + CELL(0.178 ns) = 5.239 ns; Loc. = LCCOMB_X49_Y8_N16; Fanout = 1; COMB Node = 'full_adder:\adders:3:fulladders|OUTPUT'
+    Info: 5: + IC(1.221 ns) + CELL(2.850 ns) = 9.310 ns; Loc. = PIN_Y19; Fanout = 0; PIN Node = 's[3]'
+    Info: Total cell delay = 4.894 ns ( 52.57 % )
+    Info: Total interconnect delay = 4.416 ns ( 47.43 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 128 megabytes
+    Info: Processing ended: Fri Apr 01 12:07:47 2011
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

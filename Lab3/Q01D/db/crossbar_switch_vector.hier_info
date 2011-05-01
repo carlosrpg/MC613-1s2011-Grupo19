@@ -1,0 +1,99 @@
+|crossbar_switch_vector
+INPUT_1[0] => crossbar_switch:Generate_Crossbar:0:crossbar_i.Input_1[0]
+INPUT_1[1] => crossbar_switch:Generate_Crossbar:0:crossbar_i.Input_1[1]
+INPUT_1[2] => crossbar_switch:Generate_Crossbar:0:crossbar_i.Input_1[2]
+INPUT_2[0] => crossbar_switch:Generate_Crossbar:0:crossbar_i.Input_2[0]
+INPUT_2[1] => crossbar_switch:Generate_Crossbar:0:crossbar_i.Input_2[1]
+INPUT_2[2] => crossbar_switch:Generate_Crossbar:0:crossbar_i.Input_2[2]
+S[0] => crossbar_switch:Generate_Crossbar:0:crossbar_i.S
+S[1] => crossbar_switch:Generate_Crossbar:1:crossbar_i.S
+S[2] => crossbar_switch:Generate_Crossbar:2:crossbar_i.S
+OUTPUT_1[0] <= crossbar_switch:Generate_Crossbar:2:crossbar_i.OUTPUT_1[0]
+OUTPUT_1[1] <= crossbar_switch:Generate_Crossbar:2:crossbar_i.OUTPUT_1[1]
+OUTPUT_1[2] <= crossbar_switch:Generate_Crossbar:2:crossbar_i.OUTPUT_1[2]
+OUTPUT_2[0] <= crossbar_switch:Generate_Crossbar:2:crossbar_i.OUTPUT_2[0]
+OUTPUT_2[1] <= crossbar_switch:Generate_Crossbar:2:crossbar_i.OUTPUT_2[1]
+OUTPUT_2[2] <= crossbar_switch:Generate_Crossbar:2:crossbar_i.OUTPUT_2[2]
+
+
+|crossbar_switch_vector|crossbar_switch:\Generate_Crossbar:0:crossbar_i
+Input_1[0] => OUTPUT_1.DATAA
+Input_1[0] => OUTPUT_2.DATAB
+Input_1[1] => OUTPUT_1.DATAA
+Input_1[1] => OUTPUT_2.DATAB
+Input_1[2] => OUTPUT_1.DATAA
+Input_1[2] => OUTPUT_2.DATAB
+Input_2[0] => OUTPUT_1.DATAB
+Input_2[0] => OUTPUT_2.DATAA
+Input_2[1] => OUTPUT_1.DATAB
+Input_2[1] => OUTPUT_2.DATAA
+Input_2[2] => OUTPUT_1.DATAB
+Input_2[2] => OUTPUT_2.DATAA
+S => OUTPUT_1.OUTPUTSELECT
+S => OUTPUT_1.OUTPUTSELECT
+S => OUTPUT_1.OUTPUTSELECT
+S => OUTPUT_2.OUTPUTSELECT
+S => OUTPUT_2.OUTPUTSELECT
+S => OUTPUT_2.OUTPUTSELECT
+OUTPUT_1[0] <= OUTPUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_1[1] <= OUTPUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_1[2] <= OUTPUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_2[0] <= OUTPUT_2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_2[1] <= OUTPUT_2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_2[2] <= OUTPUT_2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crossbar_switch_vector|crossbar_switch:\Generate_Crossbar:1:crossbar_i
+Input_1[0] => OUTPUT_1.DATAA
+Input_1[0] => OUTPUT_2.DATAB
+Input_1[1] => OUTPUT_1.DATAA
+Input_1[1] => OUTPUT_2.DATAB
+Input_1[2] => OUTPUT_1.DATAA
+Input_1[2] => OUTPUT_2.DATAB
+Input_2[0] => OUTPUT_1.DATAB
+Input_2[0] => OUTPUT_2.DATAA
+Input_2[1] => OUTPUT_1.DATAB
+Input_2[1] => OUTPUT_2.DATAA
+Input_2[2] => OUTPUT_1.DATAB
+Input_2[2] => OUTPUT_2.DATAA
+S => OUTPUT_1.OUTPUTSELECT
+S => OUTPUT_1.OUTPUTSELECT
+S => OUTPUT_1.OUTPUTSELECT
+S => OUTPUT_2.OUTPUTSELECT
+S => OUTPUT_2.OUTPUTSELECT
+S => OUTPUT_2.OUTPUTSELECT
+OUTPUT_1[0] <= OUTPUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_1[1] <= OUTPUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_1[2] <= OUTPUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_2[0] <= OUTPUT_2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_2[1] <= OUTPUT_2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_2[2] <= OUTPUT_2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|crossbar_switch_vector|crossbar_switch:\Generate_Crossbar:2:crossbar_i
+Input_1[0] => OUTPUT_1.DATAA
+Input_1[0] => OUTPUT_2.DATAB
+Input_1[1] => OUTPUT_1.DATAA
+Input_1[1] => OUTPUT_2.DATAB
+Input_1[2] => OUTPUT_1.DATAA
+Input_1[2] => OUTPUT_2.DATAB
+Input_2[0] => OUTPUT_1.DATAB
+Input_2[0] => OUTPUT_2.DATAA
+Input_2[1] => OUTPUT_1.DATAB
+Input_2[1] => OUTPUT_2.DATAA
+Input_2[2] => OUTPUT_1.DATAB
+Input_2[2] => OUTPUT_2.DATAA
+S => OUTPUT_1.OUTPUTSELECT
+S => OUTPUT_1.OUTPUTSELECT
+S => OUTPUT_1.OUTPUTSELECT
+S => OUTPUT_2.OUTPUTSELECT
+S => OUTPUT_2.OUTPUTSELECT
+S => OUTPUT_2.OUTPUTSELECT
+OUTPUT_1[0] <= OUTPUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_1[1] <= OUTPUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_1[2] <= OUTPUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_2[0] <= OUTPUT_2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_2[1] <= OUTPUT_2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_2[2] <= OUTPUT_2.DB_MAX_OUTPUT_PORT_TYPE
+
+

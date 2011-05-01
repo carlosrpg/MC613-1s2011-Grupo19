@@ -1,0 +1,78 @@
+|q01
+x[0] => ffd:componente0.D
+x[0] => latchD:componente4.T
+x[1] => ffsr:componente1.S
+x[1] => ffJK_sync:componente2.J
+x[1] => latchSR:componente5.S
+x[2] => ffsr:componente1.R
+x[2] => ffJK_sync:componente2.K
+x[2] => latchSR:componente5.R
+x[3] => fft_sync:componente3.T
+Clear => ffd:componente0.Clear
+Clear => ffsr:componente1.Clear
+Clear => ffJK_sync:componente2.Clear
+Clear => fft_sync:componente3.Clear
+Clear => latchD:componente4.Clear
+Clear => latchSR:componente5.Clear
+clk => ffd:componente0.Clk
+clk => ffsr:componente1.Clk
+clk => ffJK_sync:componente2.Clk
+clk => fft_sync:componente3.Clk
+clk => latchD:componente4.Clk
+clk => latchSR:componente5.EN
+s[0] <= ffd:componente0.Q
+s[1] <= ffsr:componente1.Q
+s[2] <= ffJK_sync:componente2.Q
+s[3] <= fft_sync:componente3.Q
+s[4] <= latchD:componente4.Q
+s[5] <= latchSR:componente5.Q
+
+
+|q01|ffd:componente0
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Clear => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|q01|ffsr:componente1
+S => Q~0.OUTPUTSELECT
+R => Q~1.OUTPUTSELECT
+Clk => Q~reg0.CLK
+Clear => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|q01|ffJK_sync:componente2
+J => process_0~0.IN0
+J => state~0.OUTPUTSELECT
+K => process_0~0.IN1
+K => state~1.OUTPUTSELECT
+Clk => state.CLK
+Clear => state~3.OUTPUTSELECT
+Q <= state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|q01|fft_sync:componente3
+T => state.ENA
+Clk => process_0~0.IN0
+Clk => state.CLK
+Clear => process_0~0.IN1
+Q <= state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|q01|latchD:componente4
+T => Q$latch.DATAIN
+Clk => Q$latch.LATCH_ENABLE
+Clear => Q$latch.ACLR
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|q01|latchSR:componente5
+S => process_0~0.IN0
+R => process_0~0.IN1
+EN => Q$latch.LATCH_ENABLE
+Clear => Q$latch.ACLR
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

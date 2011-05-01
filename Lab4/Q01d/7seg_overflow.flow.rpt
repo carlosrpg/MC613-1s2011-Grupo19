@@ -1,0 +1,123 @@
+Flow report for 7seg_overflow
+Thu Apr 07 00:02:26 2011
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++------------------------------------+----------------------------------------------+
+; Flow Status                        ; Successful - Thu Apr 07 00:02:26 2011        ;
+; Quartus II Version                 ; 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition ;
+; Revision Name                      ; 7seg_overflow                                ;
+; Top-level Entity Name              ; s_7seg_overflow                              ;
+; Family                             ; Cyclone II                                   ;
+; Device                             ; EP2C20F484C7                                 ;
+; Timing Models                      ; Final                                        ;
+; Met timing requirements            ; Yes                                          ;
+; Total logic elements               ; 17 / 18,752 ( < 1 % )                        ;
+;     Total combinational functions  ; 17 / 18,752 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                           ;
+; Total registers                    ; 0                                            ;
+; Total pins                         ; 18 / 315 ( 6 % )                             ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                          ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                               ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                ;
++------------------------------------+----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 04/07/2011 00:02:11 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; 7seg_overflow       ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                     ;
++------------------------------------+------------------------------------------------------------------------------+---------------+-----------------+----------------+
+; Assignment Name                    ; Value                                                                        ; Default Value ; Entity Name     ; Section Id     ;
++------------------------------------+------------------------------------------------------------------------------+---------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 123494883175.130214533001188                                                 ; --            ; --              ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                                           ; --            ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                                            ; --            ; --              ; --             ;
+; MISC_FILE                          ; C:/Documents and Settings/ra083345/Desktop/MC613/Lab4/Q01d/7seg_overflow.dpf ; --            ; --              ; --             ;
+; PARTITION_COLOR                    ; 16764057                                                                     ; --            ; s_7seg_overflow ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                                                       ; --            ; s_7seg_overflow ; Top            ;
+; SEARCH_PATH                        ; c:\documents and settings\ra083345\desktop\mc613                             ; --            ; --              ; --             ;
+; TOP_LEVEL_ENTITY                   ; s_7seg_overflow                                                              ; 7seg_overflow ; --              ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                                          ; --            ; --              ; eda_blast_fpga ;
++------------------------------------+------------------------------------------------------------------------------+---------------+-----------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 182 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:04     ; 1.0                     ; 195 MB              ; 00:00:04                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 180 MB              ; 00:00:02                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 114 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:08                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                       ;
++-------------------------+------------------+------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++-------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis    ; suriname         ; Windows XP ; 5.1        ; i686           ;
+; Fitter                  ; suriname         ; Windows XP ; 5.1        ; i686           ;
+; Assembler               ; suriname         ; Windows XP ; 5.1        ; i686           ;
+; Classic Timing Analyzer ; suriname         ; Windows XP ; 5.1        ; i686           ;
++-------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off 7seg_overflow -c 7seg_overflow
+quartus_fit --read_settings_files=off --write_settings_files=off 7seg_overflow -c 7seg_overflow
+quartus_asm --read_settings_files=off --write_settings_files=off 7seg_overflow -c 7seg_overflow
+quartus_tan --read_settings_files=off --write_settings_files=off 7seg_overflow -c 7seg_overflow --timing_analysis_only
+
+
+

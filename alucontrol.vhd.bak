@@ -1,0 +1,49 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;        
+        
+ ENTITY alucontrol is   
+    PORT( 
+        aluop:   IN  STD_LOGIC_VECTOR(1 downto 0);  
+        funct:   IN  STD_LOGIC_VECTOR(5 downto 0);  
+        alucont: OUT STD_LOGIC_VECTOR(2 downto 0) 
+        );  
+END alucontrol; 
+
+ARCHITECTURE behavior OF alucontrol IS
+BEGIN
+	PROCESS(aluop, funct)
+	BEGIN
+		CASE ALUOP IS
+			WHEN "00" =>
+				ALUCONT <= "010";
+				
+			WHEN "01" =>
+				ALUCONT <= "110";
+				
+			WHEN "11" =>
+				CASE FUNCT IS
+					WHEN "100000" =>
+						ALUCONT <= "010";
+					
+					WHEN "100010" => 
+						ALUCONT <= "110";
+						
+					WHEN "100100" =>
+						ALUCONT <= "000";
+						
+					WHEN "100101" =>
+						ALUCONT <= "001";
+					
+					WHEN "101010" =>
+						ALUCONT <= "111";
+						
+					WHEN OTHERS =>
+						ALUCONT <= "011";
+				END CASE;
+				
+			WHEN OTHERS =>
+				ALUCONT <= "011";
+				
+		END CASE;
+	END PROCESS;
+END behavior ;

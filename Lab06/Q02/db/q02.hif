@@ -1,0 +1,187 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+|documentos|mc613|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+registerAsyncClear
+# storage
+db|q02.(1).cnf
+db|q02.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|documentos|mc613|registerasyncclear.vhd
+22c5daff301d529ade498cdb32de1d0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+4
+PARAMETER_SIGNED_DEC
+USR
+ constraint(input)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(output)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+registerAsyncClear:register4bits
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ffdLoad
+# storage
+db|q02.(2).cnf
+db|q02.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|documentos|mc613|ffdload.vhd
+33e3f69ce049514b8da46dda99c7cdb0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+registerAsyncClear:register4bits|ffdLoad:\registers:0:bitRegister
+registerAsyncClear:register4bits|ffdLoad:\registers:1:bitRegister
+registerAsyncClear:register4bits|ffdLoad:\registers:2:bitRegister
+registerAsyncClear:register4bits|ffdLoad:\registers:3:bitRegister
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+conv_7seg
+# storage
+db|q02.(3).cnf
+db|q02.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|documentos|mc613|conv_7seg.vhd
+66ced3e2c0acf1168f85e2d9b3dc945
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(s)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(f)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+conv_7seg:display
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+q02
+# storage
+db|q02.(0).cnf
+db|q02.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+q02.vhd
+8deed21b79e6db31615589dfe61b4594
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|documentos|mc613|lib_mc613_grupo1.vhd
+d7b87b3a368dff7302ef78944ba3ab5
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

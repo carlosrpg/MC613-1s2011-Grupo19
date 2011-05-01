@@ -1,0 +1,38 @@
+|conv_7seg
+s[0] => Mux0.IN19
+s[0] => Mux1.IN19
+s[0] => Mux2.IN19
+s[0] => Mux3.IN19
+s[0] => Mux4.IN19
+s[0] => Mux5.IN19
+s[0] => Mux6.IN19
+s[1] => Mux0.IN18
+s[1] => Mux1.IN18
+s[1] => Mux2.IN18
+s[1] => Mux3.IN18
+s[1] => Mux4.IN18
+s[1] => Mux5.IN18
+s[1] => Mux6.IN18
+s[2] => Mux0.IN17
+s[2] => Mux1.IN17
+s[2] => Mux2.IN17
+s[2] => Mux3.IN17
+s[2] => Mux4.IN17
+s[2] => Mux5.IN17
+s[2] => Mux6.IN17
+s[3] => Mux0.IN16
+s[3] => Mux1.IN16
+s[3] => Mux2.IN16
+s[3] => Mux3.IN16
+s[3] => Mux4.IN16
+s[3] => Mux5.IN16
+s[3] => Mux6.IN16
+f[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+f[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+f[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+f[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+f[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+f[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+f[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

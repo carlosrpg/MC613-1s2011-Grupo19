@@ -1,0 +1,711 @@
+|multiplier
+x[0] => barrel_shifter:multip_shift:0:Shifters.A[0]
+x[0] => barrel_shifter:multip_shift:1:Shifters.A[0]
+x[0] => barrel_shifter:multip_shift:2:Shifters.A[0]
+x[0] => barrel_shifter:multip_shift:3:Shifters.A[0]
+x[1] => barrel_shifter:multip_shift:0:Shifters.A[1]
+x[1] => barrel_shifter:multip_shift:1:Shifters.A[1]
+x[1] => barrel_shifter:multip_shift:2:Shifters.A[1]
+x[1] => barrel_shifter:multip_shift:3:Shifters.A[1]
+x[2] => barrel_shifter:multip_shift:0:Shifters.A[2]
+x[2] => barrel_shifter:multip_shift:1:Shifters.A[2]
+x[2] => barrel_shifter:multip_shift:2:Shifters.A[2]
+x[2] => barrel_shifter:multip_shift:3:Shifters.A[2]
+x[3] => barrel_shifter:multip_shift:0:Shifters.A[3]
+x[3] => barrel_shifter:multip_shift:1:Shifters.A[3]
+x[3] => barrel_shifter:multip_shift:2:Shifters.A[3]
+x[3] => barrel_shifter:multip_shift:3:Shifters.A[3]
+y[0] => vector[0][7].OUTPUTSELECT
+y[0] => vector[0][6].OUTPUTSELECT
+y[0] => vector[0][5].OUTPUTSELECT
+y[0] => vector[0][4].OUTPUTSELECT
+y[0] => vector[0][3].OUTPUTSELECT
+y[0] => vector[0][2].OUTPUTSELECT
+y[0] => vector[0][1].OUTPUTSELECT
+y[0] => vector[0][0].OUTPUTSELECT
+y[1] => vector[2][7].OUTPUTSELECT
+y[1] => vector[2][6].OUTPUTSELECT
+y[1] => vector[2][5].OUTPUTSELECT
+y[1] => vector[2][4].OUTPUTSELECT
+y[1] => vector[2][3].OUTPUTSELECT
+y[1] => vector[2][2].OUTPUTSELECT
+y[1] => vector[2][1].OUTPUTSELECT
+y[1] => vector[2][0].OUTPUTSELECT
+y[2] => vector[4][7].OUTPUTSELECT
+y[2] => vector[4][6].OUTPUTSELECT
+y[2] => vector[4][5].OUTPUTSELECT
+y[2] => vector[4][4].OUTPUTSELECT
+y[2] => vector[4][3].OUTPUTSELECT
+y[2] => vector[4][2].OUTPUTSELECT
+y[2] => vector[4][1].OUTPUTSELECT
+y[2] => vector[4][0].OUTPUTSELECT
+y[3] => vector[6][7].OUTPUTSELECT
+y[3] => vector[6][6].OUTPUTSELECT
+y[3] => vector[6][5].OUTPUTSELECT
+y[3] => vector[6][4].OUTPUTSELECT
+y[3] => vector[6][3].OUTPUTSELECT
+y[3] => vector[6][2].OUTPUTSELECT
+y[3] => vector[6][1].OUTPUTSELECT
+y[3] => vector[6][0].OUTPUTSELECT
+s[0] <= ripple_n:multip_adders:3:case_n:ripple_k.s[0]
+s[1] <= ripple_n:multip_adders:3:case_n:ripple_k.s[1]
+s[2] <= ripple_n:multip_adders:3:case_n:ripple_k.s[2]
+s[3] <= ripple_n:multip_adders:3:case_n:ripple_k.s[3]
+s[4] <= ripple_n:multip_adders:3:case_n:ripple_k.s[4]
+s[5] <= ripple_n:multip_adders:3:case_n:ripple_k.s[5]
+s[6] <= ripple_n:multip_adders:3:case_n:ripple_k.s[6]
+s[7] <= ripple_n:multip_adders:3:case_n:ripple_k.s[7]
+
+
+|multiplier|ripple_n:\multip_adders:0:case_1:ripple_1
+C_in => full_adder:adders:0:fulladders.C_IN
+x[0] => full_adder:adders:0:fulladders.INPUT_1
+x[1] => full_adder:adders:1:fulladders.INPUT_1
+x[2] => full_adder:adders:2:fulladders.INPUT_1
+x[3] => full_adder:adders:3:fulladders.INPUT_1
+x[4] => full_adder:adders:4:fulladders.INPUT_1
+x[5] => full_adder:adders:5:fulladders.INPUT_1
+x[6] => full_adder:adders:6:fulladders.INPUT_1
+x[7] => OverFlow~0.IN1
+x[7] => full_adder:adders:7:fulladders.INPUT_1
+y[0] => full_adder:adders:0:fulladders.INPUT_2
+y[1] => full_adder:adders:1:fulladders.INPUT_2
+y[2] => full_adder:adders:2:fulladders.INPUT_2
+y[3] => full_adder:adders:3:fulladders.INPUT_2
+y[4] => full_adder:adders:4:fulladders.INPUT_2
+y[5] => full_adder:adders:5:fulladders.INPUT_2
+y[6] => full_adder:adders:6:fulladders.INPUT_2
+y[7] => OverFlow~1.IN1
+y[7] => full_adder:adders:7:fulladders.INPUT_2
+s[0] <= full_adder:adders:0:fulladders.OUTPUT
+s[1] <= full_adder:adders:1:fulladders.OUTPUT
+s[2] <= full_adder:adders:2:fulladders.OUTPUT
+s[3] <= full_adder:adders:3:fulladders.OUTPUT
+s[4] <= full_adder:adders:4:fulladders.OUTPUT
+s[5] <= full_adder:adders:5:fulladders.OUTPUT
+s[6] <= full_adder:adders:6:fulladders.OUTPUT
+s[7] <= full_adder:adders:7:fulladders.OUTPUT
+C_out <= full_adder:adders:7:fulladders.C_OUT
+OverFlow <= OverFlow~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:0:case_1:ripple_1|full_adder:\adders:0:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:0:case_1:ripple_1|full_adder:\adders:1:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:0:case_1:ripple_1|full_adder:\adders:2:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:0:case_1:ripple_1|full_adder:\adders:3:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:0:case_1:ripple_1|full_adder:\adders:4:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:0:case_1:ripple_1|full_adder:\adders:5:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:0:case_1:ripple_1|full_adder:\adders:6:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:0:case_1:ripple_1|full_adder:\adders:7:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:1:case_n:ripple_k
+C_in => full_adder:adders:0:fulladders.C_IN
+x[0] => full_adder:adders:0:fulladders.INPUT_1
+x[1] => full_adder:adders:1:fulladders.INPUT_1
+x[2] => full_adder:adders:2:fulladders.INPUT_1
+x[3] => full_adder:adders:3:fulladders.INPUT_1
+x[4] => full_adder:adders:4:fulladders.INPUT_1
+x[5] => full_adder:adders:5:fulladders.INPUT_1
+x[6] => full_adder:adders:6:fulladders.INPUT_1
+x[7] => OverFlow~0.IN1
+x[7] => full_adder:adders:7:fulladders.INPUT_1
+y[0] => full_adder:adders:0:fulladders.INPUT_2
+y[1] => full_adder:adders:1:fulladders.INPUT_2
+y[2] => full_adder:adders:2:fulladders.INPUT_2
+y[3] => full_adder:adders:3:fulladders.INPUT_2
+y[4] => full_adder:adders:4:fulladders.INPUT_2
+y[5] => full_adder:adders:5:fulladders.INPUT_2
+y[6] => full_adder:adders:6:fulladders.INPUT_2
+y[7] => OverFlow~1.IN1
+y[7] => full_adder:adders:7:fulladders.INPUT_2
+s[0] <= full_adder:adders:0:fulladders.OUTPUT
+s[1] <= full_adder:adders:1:fulladders.OUTPUT
+s[2] <= full_adder:adders:2:fulladders.OUTPUT
+s[3] <= full_adder:adders:3:fulladders.OUTPUT
+s[4] <= full_adder:adders:4:fulladders.OUTPUT
+s[5] <= full_adder:adders:5:fulladders.OUTPUT
+s[6] <= full_adder:adders:6:fulladders.OUTPUT
+s[7] <= full_adder:adders:7:fulladders.OUTPUT
+C_out <= full_adder:adders:7:fulladders.C_OUT
+OverFlow <= OverFlow~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:0:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:1:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:2:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:3:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:4:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:5:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:6:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:1:case_n:ripple_k|full_adder:\adders:7:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:2:case_n:ripple_k
+C_in => full_adder:adders:0:fulladders.C_IN
+x[0] => full_adder:adders:0:fulladders.INPUT_1
+x[1] => full_adder:adders:1:fulladders.INPUT_1
+x[2] => full_adder:adders:2:fulladders.INPUT_1
+x[3] => full_adder:adders:3:fulladders.INPUT_1
+x[4] => full_adder:adders:4:fulladders.INPUT_1
+x[5] => full_adder:adders:5:fulladders.INPUT_1
+x[6] => full_adder:adders:6:fulladders.INPUT_1
+x[7] => OverFlow~0.IN1
+x[7] => full_adder:adders:7:fulladders.INPUT_1
+y[0] => full_adder:adders:0:fulladders.INPUT_2
+y[1] => full_adder:adders:1:fulladders.INPUT_2
+y[2] => full_adder:adders:2:fulladders.INPUT_2
+y[3] => full_adder:adders:3:fulladders.INPUT_2
+y[4] => full_adder:adders:4:fulladders.INPUT_2
+y[5] => full_adder:adders:5:fulladders.INPUT_2
+y[6] => full_adder:adders:6:fulladders.INPUT_2
+y[7] => OverFlow~1.IN1
+y[7] => full_adder:adders:7:fulladders.INPUT_2
+s[0] <= full_adder:adders:0:fulladders.OUTPUT
+s[1] <= full_adder:adders:1:fulladders.OUTPUT
+s[2] <= full_adder:adders:2:fulladders.OUTPUT
+s[3] <= full_adder:adders:3:fulladders.OUTPUT
+s[4] <= full_adder:adders:4:fulladders.OUTPUT
+s[5] <= full_adder:adders:5:fulladders.OUTPUT
+s[6] <= full_adder:adders:6:fulladders.OUTPUT
+s[7] <= full_adder:adders:7:fulladders.OUTPUT
+C_out <= full_adder:adders:7:fulladders.C_OUT
+OverFlow <= OverFlow~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:0:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:1:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:2:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:3:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:4:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:5:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:6:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:2:case_n:ripple_k|full_adder:\adders:7:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:3:case_n:ripple_k
+C_in => full_adder:adders:0:fulladders.C_IN
+x[0] => full_adder:adders:0:fulladders.INPUT_1
+x[1] => full_adder:adders:1:fulladders.INPUT_1
+x[2] => full_adder:adders:2:fulladders.INPUT_1
+x[3] => full_adder:adders:3:fulladders.INPUT_1
+x[4] => full_adder:adders:4:fulladders.INPUT_1
+x[5] => full_adder:adders:5:fulladders.INPUT_1
+x[6] => full_adder:adders:6:fulladders.INPUT_1
+x[7] => OverFlow~0.IN1
+x[7] => full_adder:adders:7:fulladders.INPUT_1
+y[0] => full_adder:adders:0:fulladders.INPUT_2
+y[1] => full_adder:adders:1:fulladders.INPUT_2
+y[2] => full_adder:adders:2:fulladders.INPUT_2
+y[3] => full_adder:adders:3:fulladders.INPUT_2
+y[4] => full_adder:adders:4:fulladders.INPUT_2
+y[5] => full_adder:adders:5:fulladders.INPUT_2
+y[6] => full_adder:adders:6:fulladders.INPUT_2
+y[7] => OverFlow~1.IN1
+y[7] => full_adder:adders:7:fulladders.INPUT_2
+s[0] <= full_adder:adders:0:fulladders.OUTPUT
+s[1] <= full_adder:adders:1:fulladders.OUTPUT
+s[2] <= full_adder:adders:2:fulladders.OUTPUT
+s[3] <= full_adder:adders:3:fulladders.OUTPUT
+s[4] <= full_adder:adders:4:fulladders.OUTPUT
+s[5] <= full_adder:adders:5:fulladders.OUTPUT
+s[6] <= full_adder:adders:6:fulladders.OUTPUT
+s[7] <= full_adder:adders:7:fulladders.OUTPUT
+C_out <= full_adder:adders:7:fulladders.C_OUT
+OverFlow <= OverFlow~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:0:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:1:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:2:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:3:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:4:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:5:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:6:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|ripple_n:\multip_adders:3:case_n:ripple_k|full_adder:\adders:7:fulladders
+C_IN => OUTPUT~1.IN1
+C_IN => C_OUT~1.IN0
+C_IN => C_OUT~3.IN0
+INPUT_1 => OUTPUT~0.IN0
+INPUT_1 => C_OUT~0.IN0
+INPUT_1 => C_OUT~1.IN1
+INPUT_2 => OUTPUT~0.IN1
+INPUT_2 => C_OUT~0.IN1
+INPUT_2 => C_OUT~3.IN1
+C_OUT <= C_OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT <= OUTPUT~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|barrel_shifter:\multip_shift:0:Shifters
+A[0] => output[0].DATAIN
+A[1] => output[1].DATAIN
+A[2] => output[2].DATAIN
+A[3] => output[3].DATAIN
+A[4] => output[4].DATAIN
+A[5] => output[5].DATAIN
+A[6] => output[6].DATAIN
+A[7] => output[7].DATAIN
+output[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|barrel_shifter:\multip_shift:1:Shifters
+A[0] => output[1].DATAIN
+A[1] => output[2].DATAIN
+A[2] => output[3].DATAIN
+A[3] => output[4].DATAIN
+A[4] => output[5].DATAIN
+A[5] => output[6].DATAIN
+A[6] => output[7].DATAIN
+A[7] => output[0].DATAIN
+output[0] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|barrel_shifter:\multip_shift:2:Shifters
+A[0] => output[2].DATAIN
+A[1] => output[3].DATAIN
+A[2] => output[4].DATAIN
+A[3] => output[5].DATAIN
+A[4] => output[6].DATAIN
+A[5] => output[7].DATAIN
+A[6] => output[0].DATAIN
+A[7] => output[1].DATAIN
+output[0] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier|barrel_shifter:\multip_shift:3:Shifters
+A[0] => output[3].DATAIN
+A[1] => output[4].DATAIN
+A[2] => output[5].DATAIN
+A[3] => output[6].DATAIN
+A[4] => output[7].DATAIN
+A[5] => output[0].DATAIN
+A[6] => output[1].DATAIN
+A[7] => output[2].DATAIN
+output[0] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
